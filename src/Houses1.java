@@ -8,14 +8,13 @@ public class Houses1 {
 		Tortoise.setY(375);
 		Tortoise.show();
 		Tortoise.setSpeed(10);
-		drawHouse("big","green");
-		drawHouse("medium","blue");
-		drawHouse("small","red");
+		drawHouse("big", "green");
+		drawHouse("medium", "blue");
+		drawHouse("small", "red");
 	}
 
 	public static void drawHouse(String height, String color) {
 		int pixel = 0;
-
 		System.out.println(height);
 		if (color.equals("green")) {
 			Tortoise.penDown();
@@ -38,16 +37,56 @@ public class Houses1 {
 		if (height.equals("small")) {
 			pixel = 60;
 		}
-		for (int i = 0; i < 3; i++) {
-			Tortoise.move(pixel);
-			Tortoise.turn(90);
-
+		
+				
+		
+		if (pixel==250) {
+			drawflatroof(pixel);
+		}else{
+			drawpointyroof(pixel);
 		}
+
 		for (int h = 0; h < 2; h++) {
 			Tortoise.turn(90);
 		}
 		Tortoise.move(50);
 		Tortoise.turn(-90);
+		
 
 	}
+
+	static void drawpointyroof(int pixel) {
+		Tortoise.move(pixel);
+		Tortoise.turn(60);
+		Tortoise.move(pixel);
+		Tortoise.turn(60);
+		Tortoise.move(pixel);
+		Tortoise.turn(60);
+		Tortoise.move(pixel);
+		Tortoise.turn(90);
+
+	}
+
+	static void drawflatroof(int pixel) {
+ 
+	for (int i = 0; i < 3; i++) {
+		Tortoise.move(pixel);
+		Tortoise.turn(90);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}	
+	
+	
+	
+	
+	
+	
+	
 }
