@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
+import java.util.Random;
 
 import javax.imageio.ImageIO;
 import javax.swing.JApplet;
@@ -66,6 +67,18 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 
 			// 12. Insert your completed Magic 8 ball recipe
 			// (http://bit.ly/Zdrf6d) here
+			int number = new Random(4).nextInt(4);
+			System.out.println(number);
+
+			if (number == 0) {
+				JOptionPane.showMessageDialog(null, "YES!!!!!!!");
+			} else if (number == 1) {
+				JOptionPane.showMessageDialog(null, "NO!!!!!!!!");
+			} else if (number == 2) {
+				JOptionPane.showMessageDialog(null, "Mabye you should ask goooogle!!!!!");
+			} else if (number == 3) {
+				JOptionPane.showMessageDialog(null, "Just forget about it.");
+			}
 
 		}
 
