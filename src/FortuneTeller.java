@@ -41,12 +41,12 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 		int mouseX = e.getX();
 		int mouseY = e.getY();
 		// 5. Print the mouseX variable
-		System.out.println(mouseX);
+		// System.out.println(mouseX);
 		// 6. Add the mouseY variable to the previous line so that it prints out
 		// too (no new line)
 		String xString = Integer.toString(mouseX);
 		String yString = Integer.toString(mouseY);
-		System.out.println(xString + "," + yString);
+		// System.out.println(xString + "," + yString);
 		// 7. Adjust your secret location co-ordinates here:
 		int secretLocationX = 406;
 		int secretLocationY = 373;
@@ -64,10 +64,10 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 			sound.play();
 			// 11. Use the pause() method below to wait until your music has
 			// finished
-
+			pause(37);
 			// 12. Insert your completed Magic 8 ball recipe
 			// (http://bit.ly/Zdrf6d) here
-			int number = new Random(4).nextInt(4);
+			int number = new Random().nextInt(3);
 			System.out.println(number);
 
 			if (number == 0) {
