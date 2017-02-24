@@ -1,3 +1,5 @@
+import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -6,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class SimpleCalculator implements MouseListener {
 	// Create a window with 2 JTextFields and 4 JButtons to function as a simple
@@ -18,13 +21,15 @@ public class SimpleCalculator implements MouseListener {
 	static JButton buttonSubtract = new JButton();
 	static JButton buttonMultiply = new JButton();
 	static JButton buttonDivision = new JButton();
-	static JTextField textfields1 = new JTextField("number 1");
-	static JTextField textfields2 = new JTextField("number 2");
-	static JLabel label = new JLabel("awnser");
+	static JTextField textfields1 = new JTextField(10);
+	static JTextField textfields2 = new JTextField(10);
+	static JLabel label = new JLabel("0", SwingConstants.CENTER);
 
 	public static void main(String[] args) {
-
+		frame.setSize(400, 500);
+		GridLayout layout = new GridLayout(4, 2);
 		frame.add(panel);
+		panel.setLayout(layout);
 		panel.add(textfields1);
 		panel.add(textfields2);
 		panel.add(buttonAdd);
@@ -39,13 +44,24 @@ public class SimpleCalculator implements MouseListener {
 		buttonSubtract.addMouseListener(calculator);
 		buttonMultiply.addMouseListener(calculator);
 		buttonDivision.addMouseListener(calculator);
+		// panel.setLayout(null);
+		label.setLocation(100, 200);
+		// label.setBounds(new Rectangle(new Point(200, 300),
+		// label.getPreferredSize()));
 		panel.add(label);
-		frame.pack();
+		label.setFont(Font.getFont("aerial"));
+		label.setSize(100, 100);
+		// frame.pack();
+		// label.setHorizontalAlignment(JLabel.CENTER);
+
+		label.setLocation(200, 400);
+		label.setFont(label.getFont().deriveFont(64.0f));
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	}
 
+	// hello, my naem
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
