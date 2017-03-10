@@ -57,7 +57,6 @@ public class SimpleCalculator implements MouseListener {
 		label.setLocation(200, 400);
 		label.setFont(label.getFont().deriveFont(64.0f));
 		frame.setVisible(true);
-		.args
 
 	}
 
