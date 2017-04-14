@@ -5,7 +5,7 @@ public class Minion {
 	private String color;
 	private String master;
 
-	public Minion(String color, int eyes, String name, String master) {
+	public Minion(String name, int eyes, String color, String master) {
 		// TODO Auto-generated constructor stub
 		this.name = name;
 		this.eyes = eyes;
