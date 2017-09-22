@@ -20,7 +20,7 @@ public class Person {
 
 	}
 
-	int counter() {
+	static int counter() {
 		return counter;
 
 	}

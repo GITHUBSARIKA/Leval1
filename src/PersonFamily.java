@@ -12,7 +12,7 @@ public class PersonFamily {
 		System.out.println(person2.name() + " is my name " + person2.age() + " is my age ");
 		System.out.println(person3.name() + " is my name " + person3.age() + " is my age ");
 		System.out.println(person4.name() + " is my name " + person4.age() + " is my age ");
-		System.out.println(person4.counter() + " people in my family ");
+		System.out.println(Person.counter() + " people in my family ");
 
 	}
 }
