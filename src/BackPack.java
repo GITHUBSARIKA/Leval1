@@ -10,17 +10,18 @@ public class BackPack {
 
 	public static void main(String[] args) {
 		/*
-		 * Your mission is to get to school, but first you need to get all of
-		 * your supplies into your backpack.
+		 * Your mission is to get to school, but first you need to get all of your
+		 * supplies into your backpack.
 		 */
-		BackPack pack = new BackPack();
+		BackPack bp = new BackPack();
+		Supply supply = new Supply();
 		Pencil pencil = new Pencil();
-		pack.putInBackpack(pencil);
 		Ruler ruler = new Ruler();
-		pack.putInBackpack(ruler);
 		Textbook textbook = new Textbook();
-		pack.putInBackpack(textbook);
-		pack.goToSchool();
+		bp.putInBackpack(pencil);
+		bp.putInBackpack(textbook);
+		bp.putInBackpack(ruler);
+		bp.goToSchool();
 
 	}
 

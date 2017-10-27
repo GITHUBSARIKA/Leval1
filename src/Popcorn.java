@@ -1,4 +1,3 @@
-
 /* Your mission and you have to accept it:
  *         Add a main method to the Popcorn class to cook a bag of Popcorn. Don't change the existing methods.
  */
@@ -31,18 +30,16 @@ class Microwave {
 }
 
 public class Popcorn {
+	public static void main(String[] args) {
+		Microwave micro = new Microwave();
+		Popcorn yummy = new Popcorn("caramel");
+		micro.putInMicrowave(yummy);
+		micro.setTime(5);
+		micro.startMicrowave();
+	}
 
 	private int kernels = 20;
 	private String flavor;
-
-	public static void main(String[] args) {
-		Popcorn y = new Popcorn("Buttery");
-		Microwave x = new Microwave();
-		x.putInMicrowave(y);
-		x.setTime(2);
-		x.startMicrowave();
-
-	}
 
 	Popcorn(String flavor) {
 		this.flavor = flavor;

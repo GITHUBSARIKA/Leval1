@@ -1,13 +1,14 @@
 // Copyright Wintriss Technical Schools 2013
-public class TeaMaker {
+public class MakeTea {
 
 	/* Figure out how to make a cup of tea using the classes below */
 	public static void main(String[] args) {
-		TeaBag teabag = new TeaBag(TeaBag.MINT);
-		Kettle kettle = new Kettle();
+		TeaBag tb = new TeaBag("Passion Fruit");
+		Kettle k = new Kettle();
 		Cup cup = new Cup();
-		kettle.boil();
-		cup.makeTea(teabag, kettle.getWater());
+
+		k.boil();
+		cup.makeTea(tb, k.getWater());
 	}
 }
 
